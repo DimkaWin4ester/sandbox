@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Flex, Modal } from 'antd';
+import { Button, Flex, Grid, Modal } from 'antd';
 import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import { recursiveSortCode } from '@utils/recursiveSort';
 import { recursiveForEachCode } from '@utils/recursiveForEach';
@@ -22,6 +22,8 @@ export default function HomeFooBlock() {
     null
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { useBreakpoint } = Grid;
+  const screens = useBreakpoint();
 
   const parseDateWithTimezone = (dateString: string) => {
     const timezoneMatch = dateString.match(/\(GMT ([+\-]\d+)\)/);
@@ -53,7 +55,10 @@ export default function HomeFooBlock() {
   };
 
   return (
-    <Flex gap={'small'} align={'start'} justify="space-between">
+    <Flex
+      gap={'small'}
+      vertical={screens.xs ? true : false}
+    >
       <Flex
         gap={'small'}
         align={'start'}
