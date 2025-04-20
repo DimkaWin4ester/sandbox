@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Button, Flex, Modal } from 'antd';
 import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
-import { recursiveFindCode } from '../../../utils/recursiveFind';
-import { recursiveForEachCode } from '../../../utils/recursiveForEach';
-import { recursiveSortCode } from '../../../utils/recursiveSort';
+import { recursiveSortCode } from '@utils/recursiveSort';
+import { recursiveForEachCode } from '@utils/recursiveForEach';
+import { recursiveFindCode } from '@utils/recursiveFind';
 
 const initialDates = [
   '04.03.2024 10:00 (GMT +3)',

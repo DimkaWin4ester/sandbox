@@ -1,7 +1,7 @@
 import { Tabs } from 'antd';
 import type { TabsProps } from 'antd';
 import styles from './Home.module.css';
-import HomeFooBlock from '../../features/home/home-foo-block/home-foo-block';
+import HomeFooBlock from 'src/features/home/home-foo-block/home-foo-block';
 
 export default function HomePage() {
   const onChange = (key: string) => {
