@@ -1,9 +1,11 @@
-import { Tabs } from 'antd';
+import { Button, Tabs } from 'antd';
 import type { TabsProps } from 'antd';
 import styles from './Home.module.css';
 import HomeFooBlock from 'src/features/home/home-foo-block/home-foo-block';
+import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
+  const navigate = useNavigate()
   const onChange = (key: string) => {
     console.log(key);
   };
@@ -28,6 +30,7 @@ export default function HomePage() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
+        <Button type='primary' onClick={()=>navigate('/currency-rate')}>К валютам</Button>
         <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
       </div>
     </div>

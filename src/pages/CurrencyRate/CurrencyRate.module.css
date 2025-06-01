@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   padding: 30px;
-}
-.container {
-  width: 500px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
